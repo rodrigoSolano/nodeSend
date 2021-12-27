@@ -1,7 +1,11 @@
 const express = require('express');
+const conectarDB = require('./config/db');
 
 // crear el servidor
 const app = express();
+
+// Conectar con la base de datos
+conectarDB();
 
 console.log('Iniciando NodeSend');
 
