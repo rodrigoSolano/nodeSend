@@ -12,6 +12,9 @@ console.log('Iniciando NodeSend');
 // puerto de la app
 const port = process.env.PORT || 4000;
 
+// Uso de json
+app.use(express.json());
+
 // rutas de la app
 app.use('/api/usuarios', require('./routes/usuarios'));
 
