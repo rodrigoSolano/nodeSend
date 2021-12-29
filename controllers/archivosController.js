@@ -1,7 +1,8 @@
 exports.subirArchivo = async (req, res) => {
   console.log('req.body', req.body);
+  console.log('req.file', req.file);
 };
 
-exports.elimiinarArchivo = async (req, res) => {
+exports.eliminarArchivo = async (req, res) => {
   console.log('req.body', req.body);
 };
