@@ -6,6 +6,7 @@ const archivosController = require('../controllers/archivosController');
 
 router.post(
   '/',
+  auth,
   archivosController.subirArchivo,
 );
 
