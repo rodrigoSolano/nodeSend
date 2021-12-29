@@ -1,9 +1,15 @@
 const shortid = require('shortid');
 const bcrypt = require('bcrypt');
+const { validationResult } = require('express-validator');
 const Enlace = require('../models/Enlace');
 
+// eslint-disable-next-line consistent-return
 exports.nuevoEnlace = async (req, res, next) => {
   // Revisar si hay errores
+  const errores = validationResult(req);
+  if (!errores.isEmpty()) {
+    return res.status(400).json({ errores: errores.array() });
+  }
 
   // Crear el enlace
   // eslint-disable-next-line camelcase
