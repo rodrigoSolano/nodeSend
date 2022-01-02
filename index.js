@@ -19,6 +19,9 @@ console.log('Iniciando NodeSend');
 // puerto de la app
 const port = process.env.PORT || 4000;
 
+// Habilitar carpeta publica
+app.use(express.static('uploads'));
+
 // Uso de json
 app.use(express.json());
 

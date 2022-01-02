@@ -10,6 +10,8 @@ router.post(
   archivosController.subirArchivo,
 );
 
+router.get('/:archivo', archivosController.descargar);
+
 router.delete(
   '/:id',
   auth,
