@@ -23,7 +23,7 @@ exports.nuevoUsuario = async (req, res) => {
   // crear el nuevo usuario
   usuario = new Usuario(req.body);
   // hashear el password
-  const salt = await bcrypt.genSalt(20);
+  const salt = await bcrypt.genSalt(10);
   usuario.password = await bcrypt.hash(password, salt);
   await usuario.save();
   return res.json({ msg: 'Usuario creado correctamente' });
