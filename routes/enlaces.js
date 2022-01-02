@@ -3,7 +3,6 @@ const express = require('express');
 const router = express.Router();
 const { check } = require('express-validator');
 const enlacesController = require('../controllers/enlacesController');
-const archivosController = require('../controllers/archivosController');
 const auth = require('../middleware/auth');
 
 router.post(
@@ -19,7 +18,6 @@ router.get('/', enlacesController.todosEnlaces);
 router.get(
   '/:url',
   enlacesController.obtenerEnlace,
-  archivosController.eliminarArchivo,
 );
 
 module.exports = router;
