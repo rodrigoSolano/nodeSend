@@ -14,7 +14,7 @@ exports.subirArchivo = async (req, res, next) => {
       },
       filename: (_req, file, cb) => {
         const extension = file.originalname.substring(file.originalname.lastIndexOf('.'), file.originalname.length);
-        cb(null, `${shortid.generate()}.${extension}`);
+        cb(null, `${shortid.generate()}${extension}`);
       },
     }),
   };
