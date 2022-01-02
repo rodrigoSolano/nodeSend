@@ -13,10 +13,10 @@ exports.nuevoEnlace = async (req, res, next) => {
 
   // Crear el enlace
   // eslint-disable-next-line camelcase
-  const { nombre_original } = req.body;
+  const { nombre_original, nombre } = req.body;
   const enlace = new Enlace();
   enlace.url = shortid.generate();
-  enlace.nombre = shortid.generate();
+  enlace.nombre = nombre;
   // eslint-disable-next-line camelcase
   enlace.nombre_original = nombre_original;
 
