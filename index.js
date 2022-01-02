@@ -10,7 +10,7 @@ conectarDB();
 
 // Habilitar Cors
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: process.env.FRONTEND_URL,
 };
 app.use(cors(corsOptions));
 
