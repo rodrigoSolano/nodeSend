@@ -1,3 +1,5 @@
 /node_modules
 /uploads
+variables.env
+workspace.code-workspace
 package-lock.json
